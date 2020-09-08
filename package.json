@@ -1,6 +1,7 @@
 {
-  "name": "tractivity",
-  "version": "1.3.0",
+  "homepage": "https://Solijons.github.io/applet",
+  "name": "applet",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "serve": "^11.3.0"
@@ -9,6 +10,7 @@
     "lint": "npx eslint src/",
     "start:dev": "react-scripts start",
     "dev": "npm run lint && PORT=8080 npm run start:dev",
+    "deploy": "gh-pages -d build",
     "build-image": "docker image build -t tractivity-ui:dev .",
     "gendocs": "typedoc src",
     "restart-container": "npm run stop-container; npm run start-container",
@@ -63,8 +65,9 @@
     "chart.js": "^2.9.3",
     "date-fns": "^2.12.0",
     "express": "^4.17.1",
-    "md5": "^2.2.1",
+    "gh-pages": "^3.1.0",
     "material-table": "^1.59.0",
+    "md5": "^2.2.1",
     "mocha": "^7.1.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",

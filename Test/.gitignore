@@ -1,0 +1,14 @@
+.idea
+Test.iml
+out
+.classpath
+.project
+.settings
+.factorypath
+target/
+logs
+~*
+src/main/resources/events.csv
+src/main/resources/events.json
+src/main/resources/events.xml
+src/main/logs

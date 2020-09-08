@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="73.25" y="147.0">tractivity.app_manager.TestBase</node>
+    <node x="279.0" y="76.0">tractivity.app_manager.helpers.TestHelpers</node>
+    <node x="0.0" y="365.0">PageObjectModel.GlobalPOM</node>
+    <node x="175.0" y="294.0">model.NFEFormData</node>
+    <node x="600.0" y="76.0">tractivity.app_manager.helpers.SessionHelper</node>
+    <node x="507.0" y="147.0">model.CreateNFFormData</node>
+    <node x="290.0" y="147.0">tractivity.app_manager.ApplicationManager</node>
+    <node x="154.0" y="365.0">model.FileModel</node>
+    <node x="150.0" y="76.0">PageObjectModel.EventsPOM</node>
+    <node x="0.0" y="294.0">tractivity.app_manager.helpers.TableHelpers</node>
+    <node x="422.0" y="76.0">tractivity.app_manager.helpers.NavigationHelper</node>
+    <node x="279.0" y="0.0">tractivity.app_manager.helpers.HelpersBase</node>
+    <node x="343.0" y="294.0">model.NFNoteForm</node>
+    <node x="308.0" y="365.0">tractivity.app_manager.MONCreds</node>
+    <node x="136.0" y="223.0">tractivity.tests.Dashboard</node>
+    <node x="455.0" y="365.0">model.Events</node>
+    <node x="0.0" y="76.0">PageObjectModel.DashboardPOM</node>
+    <node x="0.0" y="223.0">tractivity.tests.EventsTest</node>
+    <node x="504.0" y="294.0">generators.Generators</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="PageObjectModel.DashboardPOM" target="tractivity.app_manager.helpers.HelpersBase">
+      <point x="0.0" y="-13.0" />
+      <point x="65.0" y="46.0" />
+      <point x="291.3" y="46.0" />
+      <point x="-49.19999999999999" y="13.0" />
+    </edge>
+    <edge source="tractivity.app_manager.helpers.SessionHelper" target="tractivity.app_manager.helpers.HelpersBase">
+      <point x="0.0" y="-13.0" />
+      <point x="668.5" y="46.0" />
+      <point x="389.7" y="46.0" />
+      <point x="49.19999999999999" y="13.0" />
+    </edge>
+    <edge source="PageObjectModel.EventsPOM" target="tractivity.app_manager.helpers.HelpersBase">
+      <point x="0.0" y="-13.0" />
+      <point x="204.5" y="56.0" />
+      <point x="315.9" y="56.0" />
+      <point x="-24.600000000000023" y="13.0" />
+    </edge>
+    <edge source="tractivity.app_manager.helpers.TestHelpers" target="tractivity.app_manager.helpers.HelpersBase">
+      <point x="0.0" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="tractivity.tests.EventsTest" target="tractivity.app_manager.TestBase">
+      <point x="0.0" y="-13.0" />
+      <point x="58.0" y="198.0" />
+      <point x="98.75" y="198.0" />
+      <point x="-25.5" y="13.0" />
+    </edge>
+    <edge source="tractivity.app_manager.helpers.NavigationHelper" target="tractivity.app_manager.helpers.HelpersBase">
+      <point x="0.0" y="-13.0" />
+      <point x="501.0" y="56.0" />
+      <point x="365.1" y="56.0" />
+      <point x="24.600000000000023" y="13.0" />
+    </edge>
+    <edge source="tractivity.tests.Dashboard" target="tractivity.app_manager.TestBase">
+      <point x="0.0" y="-13.0" />
+      <point x="190.5" y="198.0" />
+      <point x="149.75" y="198.0" />
+      <point x="25.5" y="13.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="778.0" y="403.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

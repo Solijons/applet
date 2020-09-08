@@ -1,0 +1,32 @@
+[
+  {
+    "application": "Cardguard",
+    "date": "9/5/2020",
+    "payouts": "$8967.14",
+    "status": "pending"
+  },
+  {
+    "application": "Daltfresh",
+    "date": "9/4/2020",
+    "payouts": "$11021.43",
+    "status": "paid"
+  },
+  {
+    "application": "Holdlamis",
+    "date": "9/5/2020",
+    "payouts": "$11920.21",
+    "status": "overdue"
+  },
+  {
+    "application": "Transcof",
+    "date": "9/5/2020",
+    "payouts": "$16828.24",
+    "status": "overdue"
+  },
+  {
+    "application": "Cardguard",
+    "date": "9/1/2020",
+    "payouts": "$20851.38",
+    "status": "paid"
+  }
+]

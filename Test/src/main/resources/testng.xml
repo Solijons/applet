@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+
+    <test name="Dashboard" >
+        <classes>
+            <class name="tractivity.tests.Dashboard.NFCreations"/>
+            <class name="tractivity.tests.Dashboard.NFModifications"/>
+            <class name="tractivity.tests.Dashboard.Validators"/>
+        </classes>
+    </test>
+
+    <test name="Activity">
+        <classes>
+            <class name="tractivity.tests.Activity.ActivityCreation"/>
+            <class name="tractivity.tests.Activity.ActivityDeletions"/>
+            <class name="tractivity.tests.Activity.ActivityFilters"/>
+            <class name="tractivity.tests.Activity.ActivityModifications"/>
+            <class name="tractivity.tests.Activity.ActivityValidators"/>
+        </classes>
+    </test>
+
+    <test name="Common">
+        <classes>
+            <class name="tractivity.tests.Common.Notes.NoteModification"/>
+            <class name="tractivity.tests.Common.Notes.NotesCreation"/>
+            <class name="tractivity.tests.Common.Notes.NoteValidators"/>
+        </classes>
+    </test>
+
+</suite>

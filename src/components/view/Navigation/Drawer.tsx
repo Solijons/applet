@@ -7,14 +7,41 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 import React from 'react';
 
-import Link from '@material-ui/core/Link';
 import { IDrawerProps } from './interfaces';
 import useStyles from './style';
+
+import { NavLink } from 'react-router-dom';
 
 const DrawerHelper: React.FunctionComponent<IDrawerProps> = (props) => {
   const classes = useStyles();
 
   const { open } = props;
+
+  const links = (
+    <List>
+      {props.navigation.map((nav) => {
+        return (
+          <NavLink
+            key={nav.href}
+            to={nav.href}
+            style={{
+              textDecoration: "none",
+              color: "#333",
+            }}
+          >
+            <ListItem button>
+              <ListItemIcon>
+                {nav.icon}
+              </ListItemIcon>
+              <ListItemText>
+                {nav.name}
+              </ListItemText>
+            </ListItem>
+          </NavLink>
+        );
+      })}
+    </List>
+  )
 
   return (
     <Drawer
@@ -28,28 +55,9 @@ const DrawerHelper: React.FunctionComponent<IDrawerProps> = (props) => {
     >
       <div className={classes.drawerHeader} />
       <Divider />
-      <List>
-        {props.navigation.map((nav) => {
-          return (
-            <Link
-              key={nav.href}
-              component="a"
-              color="inherit"
-              href={nav.href}
-              underline="none"
-            >
-              <ListItem>
-                <ListItemIcon>
-                  {nav.icon}
-                </ListItemIcon>
-                <ListItemText>
-                  {nav.name}
-                </ListItemText>
-              </ListItem>
-            </Link>
-          );
-        })}
-      </List>
+      <div>
+        {links}
+      </div>
     </Drawer>
   );
 };

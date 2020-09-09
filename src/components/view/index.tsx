@@ -3,24 +3,17 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
-import DashboardIcon from '@material-ui/icons/Dashboard';
 import clsx from 'clsx';
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-
+import DashboardIcon from '@material-ui/icons/Dashboard';
 import Copyright from '../common/Copyright';
-import Dashboard from './Dashboard';
 import { IAppBarProps } from './interfaces';
-
 import navStyles from './Navigation/style';
 import useStyles from './viewStyles';
-
 import { Typography } from '@material-ui/core';
 import Navigation from './Navigation';
-import Tables from './Tables';
-
-import TableChartIcon from '@material-ui/icons/TableChart';
-
+import { Route, Switch } from "react-router-dom";
+import appRoutes from './Navigation/routes';
 
 let theme = createMuiTheme({
   overrides: {
@@ -38,7 +31,6 @@ let theme = createMuiTheme({
 });
 
 const View: React.FunctionComponent<IAppBarProps> = (props: IAppBarProps) => {
-
   const [open, setOpen] = React.useState(false);
 
   theme = responsiveFontSizes(theme);
@@ -55,17 +47,27 @@ const View: React.FunctionComponent<IAppBarProps> = (props: IAppBarProps) => {
   const navClasses = navStyles();
   const dashboardSiteName = `Dashboard Tractivity`;
 
-  const navigation = [
-    { name: 'Dashboard', icon: <DashboardIcon />, href: process.env.PUBLIC_URL + '/' },
-    { name: 'Regular Tables', icon: <TableChartIcon />, href: process.env.PUBLIC_URL + '/tables' },
-  ];
+  const swithRoutes = (
+    <Switch>
+      {appRoutes.map((prop, key) => {
+        return (
+          <Route
+            path={prop.path}
+            component={prop.component}
+            key={key}
+          />
+        )
+      })
+      }
+    </Switch>
+  )
 
   return (
     <ThemeProvider theme={theme}>
       <div className={classes.root}>
         <CssBaseline />
         <Navigation
-          navigation={navigation}
+          navigation={appRoutes}
           open={open}
           handleDrawerOpen={handleDrawerOpen}
           handleDrawerClose={handleDrawerClose}
@@ -112,23 +114,12 @@ const View: React.FunctionComponent<IAppBarProps> = (props: IAppBarProps) => {
           </Grid>
           <Grid container spacing={3} style={{ padding: theme.spacing(3) }}>
             <Grid container item xs={12}>
-              <Router>
-                <Route path={process.env.PUBLIC_URL + `/`} exact component={Dashboard} />
-                <Route path={process.env.PUBLIC_URL + `/tables`} component={Tables} />
-              </Router>
+              {swithRoutes}
             </Grid>
           </Grid>
           <Copyright />
         </main>
       </div>
-      {/* <footer className={classes.footer}>
-        <Typography variant="subtitle1" align="center" gutterBottom>
-          Tractivity
-        </Typography>
-        <Typography variant="subtitle2" align="center" color="textSecondary" component="p">
-          Crafted with Aloha by Solijon Sharipov
-        </Typography>
-      </footer> */}
     </ThemeProvider>
   );
 };

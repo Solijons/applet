@@ -1,12 +1,8 @@
 import React from 'react';
 import Statistics from './Statistics';
 
-const Dashboard: React.FunctionComponent = () => {
+export default function Dashboard() {
   return (
-    <React.Fragment>
-      <Statistics />
-    </React.Fragment>
+    <Statistics />
   );
 };
-
-export default Dashboard;

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/applet/dashboard/static/css/main.fac5d1ca.chunk.css",
-    "main.js": "/applet/dashboard/static/js/main.04d0f6cb.chunk.js",
-    "main.js.map": "/applet/dashboard/static/js/main.04d0f6cb.chunk.js.map",
+    "main.js": "/applet/dashboard/static/js/main.aa492c68.chunk.js",
+    "main.js.map": "/applet/dashboard/static/js/main.aa492c68.chunk.js.map",
     "runtime-main.js": "/applet/dashboard/static/js/runtime-main.57ad26c4.js",
     "runtime-main.js.map": "/applet/dashboard/static/js/runtime-main.57ad26c4.js.map",
     "static/js/2.0ee4da66.chunk.js": "/applet/dashboard/static/js/2.0ee4da66.chunk.js",
     "static/js/2.0ee4da66.chunk.js.map": "/applet/dashboard/static/js/2.0ee4da66.chunk.js.map",
     "index.html": "/applet/dashboard/index.html",
-    "precache-manifest.7991590bbc51debda412966348b6056e.js": "/applet/dashboard/precache-manifest.7991590bbc51debda412966348b6056e.js",
+    "precache-manifest.eccfc4d2e45e2aad9572f23c4e156865.js": "/applet/dashboard/precache-manifest.eccfc4d2e45e2aad9572f23c4e156865.js",
     "service-worker.js": "/applet/dashboard/service-worker.js",
     "static/css/main.fac5d1ca.chunk.css.map": "/applet/dashboard/static/css/main.fac5d1ca.chunk.css.map",
     "static/js/2.0ee4da66.chunk.js.LICENSE.txt": "/applet/dashboard/static/js/2.0ee4da66.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.57ad26c4.js",
     "static/js/2.0ee4da66.chunk.js",
     "static/css/main.fac5d1ca.chunk.css",
-    "static/js/main.04d0f6cb.chunk.js"
+    "static/js/main.aa492c68.chunk.js"
   ]
 }

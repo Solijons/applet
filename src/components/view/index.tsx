@@ -56,8 +56,8 @@ const View: React.FunctionComponent<IAppBarProps> = (props: IAppBarProps) => {
   const dashboardSiteName = `Dashboard Tractivity`;
 
   const navigation = [
-    { name: 'Dashboard', icon: <DashboardIcon />, href: '/' },
-    { name: 'Regular Tables', icon: <TableChartIcon />, href: '/tables' },
+    { name: 'Dashboard', icon: <DashboardIcon />, href: process.env.PUBLIC_URL + '/' },
+    { name: 'Regular Tables', icon: <TableChartIcon />, href: process.env.PUBLIC_URL + '/tables' },
   ];
 
   return (
@@ -113,8 +113,8 @@ const View: React.FunctionComponent<IAppBarProps> = (props: IAppBarProps) => {
           <Grid container spacing={3} style={{ padding: theme.spacing(3) }}>
             <Grid container item xs={12}>
               <Router>
-                <Route path={`/`} exact component={Dashboard} />
-                <Route path={`/tables`} component={Tables} />
+                <Route path={process.env.PUBLIC_URL + `/`} exact component={Dashboard} />
+                <Route path={process.env.PUBLIC_URL + `/tables`} component={Tables} />
               </Router>
             </Grid>
           </Grid>

@@ -33,15 +33,10 @@ const DrawerHelper: React.FunctionComponent<IDrawerProps> = (props) => {
           return (
             <Link
               key={nav.href}
-              target="_blank"
               component="a"
-              rel="noopener"
               color="inherit"
               href={nav.href}
               underline="none"
-              onClick={() => {
-                window.location.href = nav.href;
-              }}
             >
               <ListItem>
                 <ListItemIcon>

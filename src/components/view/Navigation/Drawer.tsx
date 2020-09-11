@@ -10,12 +10,17 @@ import React from 'react';
 import { IDrawerProps } from './interfaces';
 import useStyles from './style';
 
+import IconButton from '@material-ui/core/IconButton';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+
 import { NavLink } from 'react-router-dom';
+import { useTheme } from '@material-ui/core';
 
 const DrawerHelper: React.FunctionComponent<IDrawerProps> = (props) => {
   const classes = useStyles();
-
-  const { open } = props;
+  const theme = useTheme();
+  const { open, handleDrawerClose } = props;
 
   const links = (
     <List>
@@ -53,7 +58,11 @@ const DrawerHelper: React.FunctionComponent<IDrawerProps> = (props) => {
         paper: classes.drawerPaper,
       }}
     >
-      <div className={classes.drawerHeader} />
+      <div className={classes.drawerHeader}>
+        <IconButton onClick={handleDrawerClose}>
+          {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+        </IconButton>
+      </div>
       <Divider />
       <div>
         {links}

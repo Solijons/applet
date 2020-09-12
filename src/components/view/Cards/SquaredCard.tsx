@@ -57,7 +57,7 @@ const SquaredCard = () => {
       </Typography>
       <Grid container spacing={3}>
         {squeredCards.map((card, key) => (
-          <Grid key={key} item xs={6} sm={4}>
+          <Grid key={key} item xs={12} sm={4}>
             <Card square elevation={2}>
               <CardMedia
                 className={classes.media}

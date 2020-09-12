@@ -36,7 +36,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   header: {
     borderRadius: '0',
     boxShadow: '0 4px 20px 0 rgba(0, 0, 0,.14), 0 7px 10px -5px rgb(146 145 145 / 1)',
-    width: "170px",
+    [theme.breakpoints.up('sm')]: {
+      width: "170px",
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: "120px",
+    }
   },
   space: {
     marginTop: theme.spacing(0.5),
@@ -99,7 +104,7 @@ const TrendingApplets = () => {
       trend: {
         icon: <TrendingUp />,
         style: {
-          background: 'linear-gradient(60deg, #66bb6a, #43a047)',
+          background: '#5383ff',
         },
       },
       income: {

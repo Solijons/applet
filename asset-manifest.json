@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/applet/static/css/main.fac5d1ca.chunk.css",
-    "main.js": "/applet/static/js/main.f950ccff.chunk.js",
-    "main.js.map": "/applet/static/js/main.f950ccff.chunk.js.map",
+    "main.js": "/applet/static/js/main.410401fb.chunk.js",
+    "main.js.map": "/applet/static/js/main.410401fb.chunk.js.map",
     "runtime-main.js": "/applet/static/js/runtime-main.f9bf0482.js",
     "runtime-main.js.map": "/applet/static/js/runtime-main.f9bf0482.js.map",
     "static/js/2.04269db2.chunk.js": "/applet/static/js/2.04269db2.chunk.js",
     "static/js/2.04269db2.chunk.js.map": "/applet/static/js/2.04269db2.chunk.js.map",
     "index.html": "/applet/index.html",
-    "precache-manifest.041b405f3c22050732ce6b9e94c1efec.js": "/applet/precache-manifest.041b405f3c22050732ce6b9e94c1efec.js",
+    "precache-manifest.59995d62d485a732e2766e86b00ee346.js": "/applet/precache-manifest.59995d62d485a732e2766e86b00ee346.js",
     "service-worker.js": "/applet/service-worker.js",
     "static/css/main.fac5d1ca.chunk.css.map": "/applet/static/css/main.fac5d1ca.chunk.css.map",
     "static/js/2.04269db2.chunk.js.LICENSE.txt": "/applet/static/js/2.04269db2.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f9bf0482.js",
     "static/js/2.04269db2.chunk.js",
     "static/css/main.fac5d1ca.chunk.css",
-    "static/js/main.f950ccff.chunk.js"
+    "static/js/main.410401fb.chunk.js"
   ]
 }

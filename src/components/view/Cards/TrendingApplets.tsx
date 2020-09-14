@@ -1,16 +1,16 @@
-import { Avatar, Card, Grid, CardContent, CardHeader, Typography } from '@material-ui/core';
+import { Avatar, Card, CardContent, CardHeader, Grid, Typography } from '@material-ui/core';
 import { makeStyles, Theme } from '@material-ui/core/styles';
-import React from 'react';
 import { CSSProperties } from '@material-ui/core/styles/withStyles';
+import React from 'react';
 
 import {
   Games,
-  Laptop,
   InsertEmoticon,
+  Laptop,
   PhoneIphone,
+  TrendingDown,
   TrendingFlat,
   TrendingUp,
-  TrendingDown,
 } from '@material-ui/icons'
 
 interface INurseryStatusAppletProps {
@@ -29,6 +29,9 @@ interface INurseryStatusAppletProps {
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
+    [theme.breakpoints.up('sm')]: {
+      width: "100%",
+    },
   },
   cardHeader: {
     position: 'relative',
@@ -40,7 +43,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       width: "170px",
     },
     [theme.breakpoints.down('sm')]: {
-      width: "120px",
+      width: 250,
     }
   },
   space: {
@@ -58,6 +61,10 @@ const TrendingApplets = () => {
   const appletData: INurseryStatusAppletProps[] = [
     {
       icon: <Laptop />,
+      income: {
+        earning: 364563245,
+        spending: 3245435,
+      },
       title: "Laptops",
       trend: {
         icon: <TrendingUp />,
@@ -65,13 +72,13 @@ const TrendingApplets = () => {
           background: 'linear-gradient(60deg, #66bb6a, #43a047)',
         },
       },
-      income: {
-        spending: 3245435,
-        earning: 364563245,
-      }
     },
     {
       icon: <Games />,
+      income: {
+        earning: 56345,
+        spending: 34543,
+      },
       title: "Games",
       trend: {
         icon: <TrendingDown />,
@@ -79,13 +86,13 @@ const TrendingApplets = () => {
           background: 'linear-gradient(315deg, #f5f5f1 0%, #e50914 74%)',
         },
       },
-      income: {
-        spending: 34543,
-        earning: 56345,
-      }
     },
     {
       icon: <InsertEmoticon />,
+      income: {
+        earning: 95999,
+        spending: 345,
+      },
       title: "Masks",
       trend: {
         icon: <TrendingFlat />,
@@ -93,23 +100,19 @@ const TrendingApplets = () => {
           background: 'linear-gradient(60deg, #ffa726, #fb8c00)',
         },
       },
-      income: {
-        spending: 345,
-        earning: 95999,
-      }
     },
     {
       icon: <PhoneIphone />,
+      income: {
+        earning: 34563,
+        spending: 12040,
+      },
       title: "Iphone",
       trend: {
         icon: <TrendingUp />,
         style: {
           background: '#5383ff',
         },
-      },
-      income: {
-        spending: 12040,
-        earning: 34563,
       },
     }
   ]
@@ -124,7 +127,7 @@ const TrendingApplets = () => {
       <Grid container spacing={3}>
         {appletData.map((applet: INurseryStatusAppletProps, index: number) => {
           return (
-            <Grid item xs={6} sm={3} key={index}>
+            <Grid item xs={12} sm={3} key={index}>
               <Card square>
                 <Typography
                   variant="h6"
@@ -151,11 +154,6 @@ const TrendingApplets = () => {
                       </Typography>
                     </Avatar>
                   }
-                // title={
-                //   <Typography variant="h6">
-                //     {applet.title}
-                //   </Typography>
-                // }
                 />
                 <CardContent>
                   <Typography variant="body1" color="textSecondary" component="p">

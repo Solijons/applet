@@ -76,7 +76,7 @@ export default function Statistics() {
       <Grid container spacing={3}>
         {monthlyStats.map((mStat) => {
           return (
-            <Grid key={mStat.title} item xs={6} sm={3}>
+            <Grid key={mStat.title} item xs={12} sm={3}>
               <MonthlyStats
                 title={mStat.title}
                 avatar={mStat.avatar}
